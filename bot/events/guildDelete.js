@@ -4,7 +4,8 @@ module.exports = (client, guild) => {
     client.log("LEAVES", `Guild Name: "${guild.name}" (ID: ${guild.id}). (Members: ${guild.memberCount})`);
 
     // Logging
-    const webhook = new Discord.WebhookClient('803881869623427073', 'oB9GNxFjb9j7Fir8_zA-SxWR90fyO_HGLeB1eOmlQxD8twlm8pjn7a1hSyweX1uCRwVp');
+    
+    const webhook = new Discord.WebhookClient('904222018851967016', '9-Iv7LnG8J0CRyk_Ur3NIqWCEfflNN8gZhV2HuowvW1lZNJOi7jlyfoJIE2BJUuV1nhZ');
     const embed = new Discord.MessageEmbed()
         .setTitle('Left Guild')
         .setDescription(`Name: ${guild.name}\nID: ${guild.id}\nMembers: ${guild.memberCount}`)

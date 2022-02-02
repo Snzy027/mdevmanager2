@@ -11,7 +11,7 @@ exports.run = async (client, message, args, guildConf, userConf) => {
     if (!nestID) return client.sendErrorEmbed(message.channel, "You must provide an egg id");
 
     if (!panel) return client.sendErrorEmbed(message.channel, "No panel has been setup!");
-    if (!key) return client.sendErrorEmbed(message.channel, "You havent set your api key!\nDo: cp!account link API-KEY");
+    if (!key) return client.sendErrorEmbed(message.channel, "You havent set your api key!\nDo: m!account link API-KEY");
 
     request.get(`${panel}/api/application/nests/${nestID}/eggs`, {
         auth: {

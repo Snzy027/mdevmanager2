@@ -13,7 +13,7 @@ module.exports = async (client) => {
     client.guilds.cache.map(async (g) => {
         let guildConf = await client.serverDB.ensure(g.id, {
             guildName: g.name,
-            prefix: global.config.get("prefix", "pm!"),
+            prefix: global.config.get("prefix", "m!"),
             panelURL: null,
             panelAPIKey: null,
             serversCreated: 0,
@@ -22,13 +22,13 @@ module.exports = async (client) => {
     });
 
     // Set Status
-    setTimeout(async () => {
+    /*setTimeout(async () => {
         await client.user.setActivity(`${client.guilds.cache.size} guilds [${global.config.get('prefix')}]`, { type: "WATCHING" });
         setInterval(async () => {
             await client.user.setActivity(`${client.guilds.cache.size} guilds [${global.config.get('prefix')}]`, { type: "WATCHING" });
         }, 15000);
     }, 5000)
-    await client.user.setActivity(`just started!`, { type: "PLAYING" });
+    await client.user.setActivity(`just started!`, { type: "PLAYING" });*/
 
     client.log("BOT", `Bot is online (${client.user.tag})`)
 

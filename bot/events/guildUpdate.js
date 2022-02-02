@@ -3,7 +3,7 @@ module.exports = async (client, oldGuild, newGuild) => {
     // Ensure guild
     let guildConf = await client.serverDB.ensure(newGuild.id, {
         guildName: newGuild.name,
-        prefix: global.config.get("prefix", "pm!"),
+        prefix: global.config.get("prefix", "m!"),
         panelURL: null,
         panelAPIKey: null,
         serversCreated: 0,

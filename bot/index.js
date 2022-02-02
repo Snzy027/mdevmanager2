@@ -39,7 +39,7 @@ switch (global.config.get("database", "sqlite")) {
             provider: mongoProvider,
             providerOptions: {
                 collection: 'servers',
-                dbName: "PteroManager",
+                dbName: "MDevHostManager",
                 url: process.env.MONGO
             }
         });
@@ -48,7 +48,7 @@ switch (global.config.get("database", "sqlite")) {
             provider: mongoProvider,
             providerOptions: {
                 collection: 'users',
-                dbName: "PteroManager",
+                dbName: "MDevHostManager",
                 url: process.env.MONGO
             }
         });

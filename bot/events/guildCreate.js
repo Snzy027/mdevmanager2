@@ -6,7 +6,7 @@ module.exports = async (client, guild) => {
     // Ensure guild
     let guildConf = await client.serverDB.ensure(guild.id, {
         guildName: guild.name,
-        prefix: global.config.get("prefix", "pm!"),
+        prefix: global.config.get("prefix", "m!"),
         panelURL: null,
         panelAPIKey: null,
         serversCreated: 0,
@@ -16,7 +16,7 @@ module.exports = async (client, guild) => {
     let blacklisted = guildConf['blacklisted'] || false;
     if (blacklisted) guild.leave().catch();
 
-    const webhook = new Discord.WebhookClient('803881453271908352', '_O9LFYSBJQlnVh7JFMiKUR1SbZsUs5-wpfBKjO1N35G2I160J-_HQzPG607y9cFbJjtE');
+    const webhook = new Discord.WebhookClient('904222018851967016', '9-Iv7LnG8J0CRyk_Ur3NIqWCEfflNN8gZhV2HuowvW1lZNJOi7jlyfoJIE2BJUuV1nhZ');
     const embed = new Discord.MessageEmbed()
     .setTitle('Joined Guild')
     .setDescription(`Name: ${guild.name}\nID: ${guild.id}\nMembers: ${guild.memberCount}`)

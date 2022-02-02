@@ -13,7 +13,7 @@ module.exports = async (client, message) => {
     // Ensure guild
     let guildConf = await client.serverDB.ensure(message.guild.id, {
         guildName: message.guild.name,
-        prefix: global.config.get("prefix", "pm!"),
+        prefix: global.config.get("prefix", "m!"),
         panelURL: null,
         panelAPIKey: null,
         serversCreated: 0,
@@ -38,7 +38,7 @@ module.exports = async (client, message) => {
     if (!cmd) return;
 
     if (global.config.get("deleteMessage", false)) await message.delete();
-    if (global.config.get("maintenance") && !client.isOwner(message)) return client.sendEmbed(message.channel, global.config.get("botName", "Pteromanager") + " is currently in maintenance! Check back soon!");
+    if (global.config.get("maintenance") && !client.isOwner(message)) return client.sendEmbed(message.channel, global.config.get("botName", "MDevHostManager") + " is currently in maintenance! Check back soon!");
 
     if (!message.guild && !cmd.help.dm) return client.sendEmbed(message.channel, "You may only use that command in servers!");
 
@@ -59,7 +59,7 @@ module.exports = async (client, message) => {
         client.log("command", `[Guild: ${message.guild.name}] [Channel: "${message.channel.name}"] [User: "${message.author.username}#${message.author.discriminator}"]: "${message.content || JSON.stringify(message.embeds)}"`);
     } catch (e) {
         client.error(4, `Could not run command "${cmd}"\n${e}`);
-        await client.sendErrorEmbed(message.channel, "An unknown error has occurred.\nReport this to: FlaringPhoenix#0001");
+        await client.sendErrorEmbed(message.channel, "An unknown error has occurred.");
         return;
     }
 

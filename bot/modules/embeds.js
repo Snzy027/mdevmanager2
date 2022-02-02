@@ -9,7 +9,7 @@ module.exports = (client) => {
                     fields: fields,
                     thumbnail: { url: thumbnail || "" },
                     color: color || global.config.get("embed.color", "#27a9e1"),
-                    footer: { text: footer || global.config.get("embed.footer", "Pteromanager | Made by FlaringPhoenix#0001") }
+                    footer: { text: footer || global.config.get("embed.footer", "MDevFreemiumHost") }
                 }
             }).then(message => {
                 resolve(message);
@@ -48,7 +48,7 @@ module.exports = (client) => {
                     fields: fields,
                     thumbnail: { url: thumbnail || "" },
                     color: color || global.config.get("embed.color", "#27a9e1"),
-                    footer: { text: footer || global.config.get("embed.footer", "Pteromanager | Made by FlaringPhoenix#0001") }
+                    footer: { text: footer || global.config.get("embed.footer", "MDevHostManager") }
                 }
             }).then(message => {
                 resolve(message);

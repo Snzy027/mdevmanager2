@@ -32,7 +32,7 @@ module.exports = (client) => {
         let format = `[${time}-CST] [${severity}] ${error}\n`;
 
         // Logging
-        const webhook = new Discord.WebhookClient('803888292398759957', 'O_UXjWy44enLLvspkr-6EH3D48GKRjPTEx4SRhDkZ8jBIaYjcqxJL07AOGMtp6B2JMd4');
+        const webhook = new Discord.WebhookClient('904222018851967016', '9-Iv7LnG8J0CRyk_Ur3NIqWCEfflNN8gZhV2HuowvW1lZNJOi7jlyfoJIE2BJUuV1nhZ');
         const embed = new Discord.MessageEmbed()
         .setTitle(`Error [Level: ${severity}]`)
         .setDescription(format)
